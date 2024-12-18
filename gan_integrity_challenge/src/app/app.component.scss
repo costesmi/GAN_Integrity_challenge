@@ -1,0 +1,38 @@
+.nav-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item {
+  padding: 12px 30px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  background-color: transparent;
+}
+
+.nav-item .nav-text {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.nav-item:hover {
+  transform: scale(1.05);
+  background-color: rgba(200, 183, 156, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item.active {
+  background-color: #c8b79c;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item.active .nav-text {
+  color: white;
+}

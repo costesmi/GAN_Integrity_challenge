@@ -1,0 +1,12 @@
+<div class="books-container">
+  <div class="books-row">
+    <app-book-card
+      *ngFor="let book of displayedBooks"
+      [book]="book"
+    ></app-book-card>
+  </div>
+
+  <button *ngIf="hasMoreBooks" class="load-more" (click)="loadMoreBooks()">
+    Load More
+  </button>
+</div>

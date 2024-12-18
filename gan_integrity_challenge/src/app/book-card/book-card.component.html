@@ -1,0 +1,5 @@
+<div class="book-card" *ngIf="book" (click)="navigateToDetails()">
+  <img [src]="book.imageLinks.thumbnail" alt="{{ book.title }}" />
+  <h3>{{ book.title }}</h3>
+  <p>{{ book.authors.join(", ") }}</p>
+</div>

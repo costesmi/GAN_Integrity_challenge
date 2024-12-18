@@ -1,0 +1,53 @@
+.book-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  .book-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    background-color: #fff;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 4px;
+      margin: 0 auto;
+    }
+
+    .book-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0;
+        color: #333;
+      }
+
+      .authors {
+        font-size: 1rem;
+        text-align: center;
+        color: #666;
+      }
+
+      .description {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #444;
+        text-align: justify;
+      }
+    }
+  }
+}

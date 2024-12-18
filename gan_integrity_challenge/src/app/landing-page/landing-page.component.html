@@ -1,0 +1,36 @@
+<main class="main-container">
+  <div class="section-header">
+    <h1>New & Trending</h1>
+    <p>Explore new worlds from authors</p>
+    <div class="search-bar">
+      <div class="input-wrapper">
+        <i class="search-icon"></i>
+        <input
+          [formControl]="searchControl"
+          placeholder="Search books..."
+          (keyup.enter)="triggerSearch()"
+        />
+      </div>
+      <button (click)="triggerSearch()">Search</button>
+    </div>
+  </div>
+
+  <div class="books-row">
+    <app-book-card
+      *ngFor="let book of latestBooks$ | async"
+      [book]="book"
+    ></app-book-card>
+  </div>
+
+  <div
+    class="filtered-section"
+    *ngIf="filteredBooks$ | async as books"
+    #filteredSection
+  >
+    <h2 *ngIf="books.length > 0">Search Results</h2>
+
+    <div class="books-row" *ngIf="books.length > 0">
+      <app-book-card *ngFor="let book of books" [book]="book"></app-book-card>
+    </div>
+  </div>
+</main>

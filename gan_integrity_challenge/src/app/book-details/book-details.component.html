@@ -1,0 +1,10 @@
+<div *ngIf="book$ | async as book" class="book-details">
+  <div class="book-card">
+    <img [src]="book.imageLinks.smallThumbnail" alt="{{ book.title }}" />
+    <div class="book-info">
+      <h1>{{ book.title }}</h1>
+      <p class="authors">By: {{ book.authors.join(", ") }}</p>
+      <p class="description">{{ book.description }}</p>
+    </div>
+  </div>
+</div>
